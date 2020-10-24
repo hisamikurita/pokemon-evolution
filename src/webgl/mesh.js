@@ -38,9 +38,9 @@ export default class Mesh {
                 this.img[i].height = 950;
                 this.img[i].crossOrigin = "anonymous";
             }
-            this.img[0].src = 'https://hisamikurita.github.io/threejs-image-pixel/dist/images/pokemon01.png';
-            this.img[1].src = 'https://hisamikurita.github.io/threejs-image-pixel/dist/images/pokemon02.png';
-            this.img[2].src = 'https://hisamikurita.github.io/threejs-image-pixel/dist/images/pokemon03.png';
+            this.img[0].src = 'https://hisamikurita.github.io/pokemon-evolution/dist/images/pokemon01.png';
+            this.img[1].src = 'https://hisamikurita.github.io/pokemon-evolution/dist/images/pokemon02.png';
+            this.img[2].src = 'https://hisamikurita.github.io/pokemon-evolution/dist/images/pokemon03.png';
 
             for (let i = 0; i < 3; i++) {
                 this.img[i].addEventListener('load', () => {
