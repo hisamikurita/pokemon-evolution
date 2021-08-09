@@ -1,6 +1,5 @@
 module.exports = {
     mode: "production",
-    // メインとなるJavaScriptファイル（エントリーポイント）
     entry: ['@babel/polyfill', './src/main.js'],
     // ファイルの出力設定
     output: {
