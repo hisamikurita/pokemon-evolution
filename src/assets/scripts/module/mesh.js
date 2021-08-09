@@ -7,7 +7,6 @@ import fragmentShader from '../shaders/fragmentshader.frag';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
-import { webpCheckDevice } from '../utility/webp-check-device';
 
 export default class Mesh {
   constructor(stage) {
@@ -27,8 +26,6 @@ export default class Mesh {
     this.composer.addPass(new RenderPass(this.stage.scene, this.stage.camera));
     this.UnrealBloomPass = new UnrealBloomPass(new THREE.Vector2(this.stage.width, this.stage.height), 0.0, 1.4, 0.0);
     this.composer.addPass(this.UnrealBloomPass);
-
-    this.extension = webpCheckDevice();
   }
 
   init() {
@@ -42,7 +39,7 @@ export default class Mesh {
         this.img[i].width = 950;
         this.img[i].height = 950;
         this.img[i].crossOrigin = "anonymous";
-        this.img[i].src = `./assets/images/pokemon0${(i + 1.0)}${this.extension}`;
+        this.img[i].src = `./assets/images/pokemon0${(i + 1.0)}.png`;
 
         this.img[i].addEventListener('load', () => {
           this.imgData[i] = new ImagePixelFilter(this.img[i], this.img[i].width, this.img[i].height, 5);
