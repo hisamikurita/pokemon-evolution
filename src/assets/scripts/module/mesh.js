@@ -33,7 +33,7 @@ export default class Mesh {
   }
 
   _getImageData() {
-    return new Promise((resolve , reject) => {
+    return new Promise((resolve, reject) => {
       for (let i = 0; i < 3; i++) {
         this.img[i] = new Image();
         this.img[i].width = 950;
@@ -43,7 +43,7 @@ export default class Mesh {
 
         this.img[i].addEventListener('load', () => {
           this.imgData[i] = new ImagePixelFilter(this.img[i], this.img[i].width, this.img[i].height, 5);
-          if (!this.img[i]) reject(window.alert('画像が上手く読み込めなかたみたいです。再読み込みしてみてください。\nIt seems that the image did not load properly. Please try to reload it.'));
+          if (this.imgData[i] === undefined) reject(window.alert('画像が上手く読み込めなかったみたいです。再読み込みしてみてください。\nIt seems that the image did not load properly. Please try to reload it.'));
           else if (i >= 2) resolve();
         });
       }
