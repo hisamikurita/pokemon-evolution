@@ -1,6 +1,6 @@
 # pokemon-evolution
 
-● <a href="https://hisamikurita.github.io/pokemon-evolution/dist/">DEMO</a>
+- <a href="https://hisamikurita.github.io/pokemon-evolution/dist/">DEMO</a>
 
 ![スクリーンショット (351)](https://user-images.githubusercontent.com/47776346/97080261-018c9400-1635-11eb-9067-be30f821b590.png)
 ![スクリーンショット (352)](https://user-images.githubusercontent.com/47776346/97080263-02bdc100-1635-11eb-8693-ed7043a5433c.png)
@@ -11,6 +11,10 @@
 * Clone repository<br>
 * Install Node.js<br>
 * Create an `.env` file and copy the contents of `.env-sample`. <br>
+```
+  cp .env-sample .env
+```
+
 * Run following commands<br>
 ```
   npm install
